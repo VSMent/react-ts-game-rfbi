@@ -7,10 +7,11 @@ import './style.css';
 
 export default function App() {
   const { turn, reset, matrix } = useGameState();
+  const onCellClick = (y, x) => console.log(y, x);
   return (
     <div className="app">
       <HeaderWithCounter turn={turn} />
-      <Battlefield matrix={matrix} />
+      <Battlefield matrix={matrix} onCellClick={onCellClick} />
       <ResetButton reset={reset} />
     </div>
   );
