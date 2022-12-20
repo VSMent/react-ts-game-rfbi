@@ -7,7 +7,7 @@ import './style.css';
 
 export default function App() {
   const { turn, reset, matrix } = useGameState();
-  const onCellClick = (y, x) => console.log(y, x);
+  const onCellClick = (y: number, x: number) => console.log(y, x);
   return (
     <div className="app">
       <HeaderWithCounter turn={turn} />
