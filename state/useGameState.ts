@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { createArray } from '../utils/array';
 import { createShip } from '../utils/battlefield';
-import { random } from '../utils/random';
 
 const MATRIX_LENGTH = 10;
 
