@@ -30,7 +30,7 @@ type BattlefieldProps = {
 
 export const Battlefield = ({ matrix, onCellClick }: BattlefieldProps) => {
   return (
-    <div>
+    <div style={{ display: 'inline-block' }}>
       {matrix.map((row, i) => (
         <div key={i} className={'line'}>
           {row.map((el, j) => (
