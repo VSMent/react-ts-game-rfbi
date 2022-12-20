@@ -1,17 +1,8 @@
 import * as React from 'react';
+import { Battlefield } from './Battlefield';
+import { HeaderWithCounter } from './HeaderWithCounter';
+import { ResetButton } from './ResetButton';
 import './style.css';
-
-const HeaderWithCounter = ({ turn }: { turn: number }) => <h2>{turn}</h2>;
-const Battlefield = () => {
-  return <div></div>;
-};
-const ResetButton = ({ reset }: { reset: () => void }) => {
-  return (
-    <button type="button" onClick={reset}>
-      Reset
-    </button>
-  );
-};
 
 export default function App() {
   const reset = () => {
