@@ -6,11 +6,11 @@ import { useGameState } from './state/useGameState';
 import './style.css';
 
 export default function App() {
-  const { turn, reset } = useGameState();
+  const { turn, reset, matrix } = useGameState();
   return (
     <div className="app">
       <HeaderWithCounter turn={turn} />
-      <Battlefield />
+      <Battlefield matrix={matrix} />
       <ResetButton reset={reset} />
     </div>
   );
