@@ -8,9 +8,10 @@ export default function App() {
   const reset = () => {
     console.log('r');
   };
+  const turn = 0;
   return (
     <div className="app">
-      <HeaderWithCounter turn={0} />
+      <HeaderWithCounter turn={turn} />
       <Battlefield />
       <ResetButton reset={reset} />
     </div>
