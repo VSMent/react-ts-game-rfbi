@@ -8,7 +8,7 @@ type CellProps = {
 };
 const Cell = ({ handleClick, value, x, y }: CellProps) => {
   return (
-    <button type="button" onClick={() => handleClick(y, x)}>
+    <button type="button" onClick={() => handleClick(y, x)} className={'cell'}>
       {value}
     </button>
   );

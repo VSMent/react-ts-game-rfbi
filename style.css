@@ -1,0 +1,11 @@
+.app {
+  text-align: center;
+}
+
+.line {
+}
+.cell {
+  border: 1px solid gray;
+  cursor: pointer;
+  background-color: skyblue;
+}
