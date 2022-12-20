@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { createArray } from '../utils/array';
 import { createShip } from '../utils/battlefield';
 import { random } from '../utils/random';
@@ -17,10 +18,22 @@ const createBattlefield = () => {
 };
 
 export const useGameState = () => {
+  const [state, setState] = useState({
+    matrix: createBattlefield(),
+    turn: 0,
+  });
+
   const reset = () => {
-    console.log('r');
+    setState({
+      matrix: createBattlefield(),
+      turn: 0,
+    });
   };
-  const turn = 0;
-  const matrix = createBattlefield();
-  return { turn, reset, matrix };
+
+  const fire = (y: number, x: number) => {
+    setState({ ...state, turn: state.turn + 1 });
+  };
+
+  const { turn, matrix } = state;
+  return { turn, reset, matrix, fire };
 };

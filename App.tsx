@@ -6,12 +6,11 @@ import { useGameState } from './state/useGameState';
 import './style.css';
 
 export default function App() {
-  const { turn, reset, matrix } = useGameState();
-  const onCellClick = (y: number, x: number) => console.log(y, x);
+  const { turn, reset, matrix, fire } = useGameState();
   return (
     <div className="app">
       <HeaderWithCounter turn={turn} />
-      <Battlefield matrix={matrix} onCellClick={onCellClick} />
+      <Battlefield matrix={matrix} onCellClick={fire} />
       <ResetButton reset={reset} />
     </div>
   );
